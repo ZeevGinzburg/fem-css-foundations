@@ -1,0 +1,274 @@
+/* main page design - background color - DONE! */
+/* font-family - google fonts links - DONE! */
+/* font-family - insert to the css - DONE!*/
+/* header design - generic: layout - two parts (header and navbar), layout of navbar - DONE! */
+/* header design font size, text decoration, liststyle, - DONE! */
+/* main text design - font size, weight, align - DONE! */
+/* date text design - font size, weight, align - DONE!*/
+/* buy ticects button design - border, background, color, padding, align&justify - DONE! */
+/* contact ticects button create HTML - DONE! */
+/* contact ticects button design - border, background, color, padding, align&justify  */
+/* speaker page design - background color  - DONE! */
+/* TODO speaker page header -  color of icon? check the original code */
+/* speaker page img -  height&width - DONE! (a bit squashed) */
+/* speaker page container -  layout grid - DONE! */
+/* speaker page container -  layout - check optional flex */
+/* speaker card -  layout grid / flex - DONE! (not neaded) */
+/* speaker card - header font size, color - DONE! */
+/* speaker card - sub header font size, weight, color - DONE! */
+/* speaker card - description align - DONE! */
+
+/* responsive */
+/* responsive header - hide nav bar - DONE! */
+/* responsive header - center h1 - DONE! */
+/* responsive header - add nav bar icon - DONE! */
+/* TODO responsive header - nav page */
+/* TODO responsive header - nav page x icon - close button */
+/* TODO responsive header - font size */
+/* TODO responsive header - button layout */
+/* TODO responsive header - speakers page layout - 2 columns to 1 */
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    /* font-size: 16px; */
+}
+
+.main-theme {
+    background-color: #FF7B54;
+    color: #ffffff;
+}
+
+
+/* header design */
+header {
+    padding: 1rem 3rem;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+header .menu-icon{
+    display: none;
+}
+header h2 {
+    grid-area: 1 / 1 / 2 / 5;
+    font-size: 2.5rem;
+
+}
+
+header nav {
+    grid-area: 1 / 5 / 2 / 11;
+}
+
+header a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header nav ul {
+    /* border: 2px solid chocolate; */
+    display: flex;
+    justify-content: flex-end;
+    /* align-items: right; */
+    flex-direction: row;
+    gap: 1rem;
+}
+
+header nav li {
+    /* border: 2px solid cadetblue; */
+    flex-basis: 10%;
+    list-style-type: none;
+}
+header nav li:last-child {
+    flex-basis: 5%;
+}
+
+header nav li a {
+    /* border: 2px solid chartreuse; */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+}
+header nav li a span {
+    font-size: 1.25rem;
+    margin: auto;
+}
+/* main design */
+
+main {
+    /* border: 2px solid cornflowerblue; */
+    margin: 5rem 4.5rem;
+    padding: 3rem;
+}
+.main-text {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6.25rem;
+}
+.main-text p {
+    font-size: 2.5rem;
+}
+main h1 {
+    font-size: 8rem;
+}
+.main-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.main-buttons button {
+    color: inherit;
+    background-color: inherit;
+    border: 3px solid white;
+    padding: 2rem 4rem 2rem 4rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    text-align: center;
+    height: 6rem;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: border 0.1s linear;
+}
+.main-buttons button.buy-button {
+    background-color: #ffffff;
+    color: #FF7B54;
+}
+.main-buttons button:hover,
+.main-buttons button:focus {
+    border: 5px solid white;
+}
+
+/* speaker page design */
+
+.speakers-theme{
+    background-color: #ffffff;
+    color: #FF7B54;
+}
+.speakers-theme nav li:last-child path{
+    /* flex-basis: 5%; */
+    fill: #FF7B54;
+}
+.speakers-container {
+    /* border: 2px solid darkslateblue; */
+    margin: 6rem 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 7.5rem;
+}
+/* speaker card design */
+.speaker-card {
+    width: 29rem;
+    /* position: relative;
+    left: 40px;
+    bottom: 300px; */
+}
+.speaker-card img {
+    margin-bottom: 1rem;
+    height: 19.5rem;
+    width: 19.5rem;
+    object-fit: cover;
+}
+.speaker-card img.image-to-top {
+    object-position: top;
+}
+.speaker-card h2 {
+    padding: 1.2rem 0;
+}
+.speaker-card h3, .speaker-card p {
+    color: black;
+    font-weight: 400;
+}
+
+.speaker-card h3 {
+    margin-bottom: 2rem;
+}
+
+.speaker-card p {
+    height: 5rem;
+}
+
+/* responsive */
+
+@media (max-width: 430px) {
+    header {
+        padding: 1.25rem;
+        border: 2px solid black;
+    }
+    header .menu-icon{
+        border: 2px solid red;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    /* body {
+    } */
+    header h2 {
+        border: 2px solid greenyellow;
+        grid-area: 1 / 2 / 2 / 10;
+        font-size: 1.25rem;
+        text-align: center;
+        
+        /* font-size: 5rem; */
+        
+    }
+    
+    header nav {
+        border: 2px solid silver;
+        grid-area: 1 / 10 / 2 / 11;
+    }
+    header nav ul {
+        gap: 0;
+    }        
+    header nav li {
+        /* padding: 0.5rem; */
+        /* font-size: 0.5rem; */
+    }
+    header nav li a.hidden-responsive{
+        display: none;
+    }
+    main {
+        padding: 0;
+    }
+
+    main h1 {
+        font-size: 2.25rem;
+    }
+    .main-text p {
+        font-size: 1.25rem;
+    }
+    .main-buttons {
+        height: 2.7rem;
+        font-size: 20rem;
+        /* display: flex; */
+        flex-direction: column;
+        /* align-items: flex-start; */
+        gap: 1rem;
+    }
+    .main-buttons button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+        display: flex; 
+        flex-direction: row;
+        align-items: center;
+        /* gap: 1rem; */
+    }
+    .speakers-container {
+        /* border: 2px solid darkslateblue; */
+        /* margin: 6rem 0 0 0; */
+        /* display: grid; */
+        grid-template-columns:  1fr;
+        /* row-gap: 7.5rem; */
+    }
+}
